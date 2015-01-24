@@ -7,7 +7,10 @@ public class LanternScript : MonoBehaviour
 
 	void Update () 
 	{
-		transform.eulerAngles = player.transform.eulerAngles;
-		transform.position = player.transform.position;
+		if (player != null)
+		{
+			transform.eulerAngles = player.transform.eulerAngles;
+			transform.position = player.transform.position;
+		}
 	}
 }
