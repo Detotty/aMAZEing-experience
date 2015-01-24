@@ -22,7 +22,10 @@ public class MovementScript : MonoBehaviour
 	void CalculateMovement()
 	{
 		Vector2 input = GetInput();
-		movement = new Vector2(speed.x*input.x, speed.y*input.y);
+		if (input.x == 0 || input.y == 0)
+			movement = new Vector2(speed.x*input.x, speed.y*input.y);
+		else 
+			movement = new Vector2(speed.x*input.x/Mathf.Sqrt(2), speed.y*input.y/Mathf.Sqrt(2));
 	}
 	
 	// Move rigid body
