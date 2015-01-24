@@ -20,7 +20,10 @@ public class FollowObjectScript : MonoBehaviour
 
 	void UpdatePosition()
 	{
-		followedPos = followed.transform.position;
-		transform.position = followedPos + pos;
+		if (followed != null)
+		{
+			followedPos = followed.transform.position;
+			transform.position = followedPos + pos;
+		}
 	}
 }
