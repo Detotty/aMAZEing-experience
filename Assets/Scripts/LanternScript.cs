@@ -8,7 +8,8 @@ public class LanternScript : MonoBehaviour
 	public float blinkingDuration = 0.2f;
 
 	private GameObject failure;
-	public float timer = 0;
+	public GameObject scripts;
+	private float timer = 0;
 
 	void Start()
 	{
@@ -20,7 +21,15 @@ public class LanternScript : MonoBehaviour
 	{
 		transform.eulerAngles = player.transform.eulerAngles;
 		transform.position = player.transform.position;
+		
+		if (scripts.gameObject.GetComponent<BatteriesScript>().power == 1)
+			Blink();
+		if (scripts.gameObject.GetComponent<BatteriesScript>().power == 0)
+			failure.renderer.enabled = true;
+	}
 
+	void Blink()
+	{
 		timer = timer + Time.deltaTime;
 		if (!failure.renderer.enabled)
 		{
@@ -32,11 +41,11 @@ public class LanternScript : MonoBehaviour
 		}
 		else
 		{
-				if (timer >= blinkingDuration)
-				{
-					failure.renderer.enabled = false;
-					timer = 0;
-				}
+			if (timer >= blinkingDuration)
+			{
+				failure.renderer.enabled = false;
+				timer = 0;
+			}
 		}
 	}
 }

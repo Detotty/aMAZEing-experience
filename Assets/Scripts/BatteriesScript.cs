@@ -15,17 +15,18 @@ public class BatteriesScript : MonoBehaviour
 
 	void UpdateBatteryPower()
 	{
-		--power;
-		Debug.Log("Battery power: " + power);
+		if (power!=0)
+			--power;
+		//Debug.Log("Battery power: " + power);
 
-		if (power == 0)
-		{
-			Debug.Log("Battery is dead");
-			GameObject playerObject = GameObject.FindWithTag("Player");
-			if (playerObject != null)
-				Destroy(playerObject);
-			Destroy(gameObject);
-		}
+		//if (power == 0)
+		//{
+			//Debug.Log("Battery is dead");
+			//GameObject playerObject = GameObject.FindWithTag("Player");
+			//if (playerObject != null)
+				//Destroy(playerObject);
+			//Destroy(gameObject);
+		//}
 	}
 
 	// Draw batteries with respect to the player position
