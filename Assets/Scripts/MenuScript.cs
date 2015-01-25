@@ -4,15 +4,29 @@ using System.Collections;
 
 public class MenuScript : MonoBehaviour
 {
-	bool pressed = false;
+	private bool pressed = false;
+	public GameObject beforeMenu,afterMenu;
+	public float delay = 1.5f;
+
+	private float timer = 0;
+
+	void Start()
+	{
+		afterMenu.SetActive(false);
+	}
 
 	void Update()
 	{
 		if (pressed)
 		{
+			beforeMenu.SetActive(false);
+			afterMenu.SetActive(true);
+
+			timer = timer + Time.deltaTime;
 			// On Click, load the first level.
 			// "Stage1" is the name of the first scene we created.
-			Application.LoadLevel("MazeTcholas");
+			if (timer >= delay)
+				Application.LoadLevel("MazeTcholas");
 		}
 	}
 
