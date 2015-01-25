@@ -11,8 +11,8 @@ public class BatteriesHelper : MonoBehaviour
 	public float scale = 0.225f;
 	public float x = -5.9f;
 	public float y = -4.5f;
-	public float heightScale = 2f;
-	public float widthScale = 0.25f;
+	private float heightScale = 2f;
+	private float widthScale = 0.25f;
 
 	private float elapsedTime = 0f;
 
