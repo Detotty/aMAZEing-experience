@@ -77,14 +77,18 @@ public class TrapScript : MonoBehaviour
 
 	void OnTriggerEnter2D(Collider2D otherCollider)
 	{
-		elapsedTime = 0;
+		// Avoid multiple activations while in the trap
+		if (!isTrapRunning)
+		{
+			elapsedTime = 0;
 
-		if (trapType == TrapType.SingleActivation)
-			SetActiveChildren(true);
-		else if (trapType == TrapType.ToggleActivation)
-			ToggleActiveChildren();
-		else if (trapType == TrapType.CageActivation)
-			CageActiveChildren();
+			if (trapType == TrapType.SingleActivation)
+				SetActiveChildren(true);
+			else if (trapType == TrapType.ToggleActivation)
+				ToggleActiveChildren();
+			else if (trapType == TrapType.CageActivation)
+				CageActiveChildren();
+		}
 	}
 
 	void Update()
