@@ -9,7 +9,7 @@ public class BatteriesHelper : MonoBehaviour {
 	public Texture texture;
 	public float scale = 0.225f;
 	public float x = -5.9f;
-	public float y = -0.75f;
+	public float y = -4.5f;
 
 	private float elapsedTime = 0f;
 
@@ -74,7 +74,7 @@ public class BatteriesHelper : MonoBehaviour {
 			playerPosition.y -= y;
 			Vector3 newPosition = Camera.main.WorldToScreenPoint(playerPosition);
 			
-			Rect position = new Rect(newPosition.x, newPosition.y, scale*Screen.width*0.25f, scale*Screen.height/3f*Power);
+			Rect position = new Rect(newPosition.x, newPosition.y, scale*Screen.width*0.25f, -scale*Screen.height/3f*Power);
 			Rect size = new Rect(0, 0, 1.0f, 1.0f/3f*Power);
 			GUI.DrawTextureWithTexCoords(position, texture, size);
 		}
