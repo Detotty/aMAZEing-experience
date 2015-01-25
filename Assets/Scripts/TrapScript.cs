@@ -15,6 +15,8 @@ public class TrapScript : MonoBehaviour
 	public float cageFirstDuration = 5;
 	public float cageDuration = 10;
 
+	public bool initializeActive = false;
+
 	// Variables used for timed traps
 	private bool isTrapRunning = false;
 	private float elapsedTime = 0;
@@ -70,7 +72,7 @@ public class TrapScript : MonoBehaviour
 
 	void Awake()
 	{
-		SetActiveChildren(false);
+		SetActiveChildren(initializeActive);
 	}
 
 	void OnTriggerEnter2D(Collider2D otherCollider)

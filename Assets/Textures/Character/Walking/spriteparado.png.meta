@@ -1,7 +1,13 @@
 fileFormatVersion: 2
 guid: ba751c49db167b44cb669037bb0952b2
 TextureImporter:
-  fileIDToRecycleName: {}
+  fileIDToRecycleName:
+    21300000: spriteparado_0
+    21300002: spriteparado_1
+    21300004: spriteparado_2
+    21300006: spriteparado_3
+    21300008: spriteparado_4
+    21300010: spriteparado_5
   serializedVersion: 2
   mipmaps:
     mipMapMode: 0
@@ -27,7 +33,7 @@ TextureImporter:
     filterMode: -1
     aniso: 16
     mipBias: -1
-    wrapMode: -1
+    wrapMode: 1
   nPOTScale: 0
   lightmap: 0
   compressionQuality: 50
@@ -42,6 +48,66 @@ TextureImporter:
   textureType: 8
   buildTargetSettings: []
   spriteSheet:
-    sprites: []
+    sprites:
+    - name: spriteparado_0
+      rect:
+        serializedVersion: 2
+        x: 9
+        y: 7
+        width: 170
+        height: 285
+      alignment: 0
+      pivot: {x: .5, y: .5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: spriteparado_1
+      rect:
+        serializedVersion: 2
+        x: 175
+        y: 9
+        width: 170
+        height: 285
+      alignment: 0
+      pivot: {x: .5, y: .5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: spriteparado_2
+      rect:
+        serializedVersion: 2
+        x: 339
+        y: 12
+        width: 170
+        height: 285
+      alignment: 0
+      pivot: {x: .5, y: .5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: spriteparado_3
+      rect:
+        serializedVersion: 2
+        x: 503
+        y: 12
+        width: 170
+        height: 285
+      alignment: 0
+      pivot: {x: .5, y: .5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: spriteparado_4
+      rect:
+        serializedVersion: 2
+        x: 669
+        y: 12
+        width: 170
+        height: 285
+      alignment: 0
+      pivot: {x: .5, y: .5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: spriteparado_5
+      rect:
+        serializedVersion: 2
+        x: 840
+        y: 12
+        width: 170
+        height: 285
+      alignment: 0
+      pivot: {x: .5, y: .5}
+      border: {x: 0, y: 0, z: 0, w: 0}
   spritePackingTag: 
   userData: 

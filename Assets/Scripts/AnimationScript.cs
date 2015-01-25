@@ -4,21 +4,21 @@ using System.Collections;
 public class AnimationScript : MonoBehaviour 
 {
 	private GameObject walking, plotTwist;
-	public GameObject gameState;
 
 	public float endGameTime = 3.5f;
 	private float endGameTimer = 0;
 
-	void Start () 
+	void Start()
 	{
 		walking = transform.Find("Walking").gameObject;
 		plotTwist = transform.Find("PlotTwist").gameObject;
 		walking.SetActive(false);
 		plotTwist.SetActive(false);
 	}
-	void Update () 
+
+	void Update()
 	{
-		if (gameState.GetComponent<GameState>().currentState == GameStates.WIN)
+		if (GameStateHelper.Instance.currentState == GameStates.WIN)
 		{
 			walking.SetActive(false);
 			renderer.enabled = true;

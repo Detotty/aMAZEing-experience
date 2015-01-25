@@ -9,24 +9,21 @@ public enum GameStates
 	WIN
 };
 
-public class GameState : MonoBehaviour 
+public class GameStateHelper : MonoBehaviour 
 {
-	public static GameState Instance;
-
-	public float endGameTime = 7;
-	private float timer = 0;
+	public static GameStateHelper Instance;
 
 	public GameStates currentState;
 	private GameStates prevState;
 
 	public GameObject gameOver;
-	public GameObject map;
-	public GameObject ending;
 
 	void Start () 
 	{
+		if (Instance != null)
+			Debug.LogError("Multiple instances of GameStateHelper");
+		Instance = this;
 		gameOver.renderer.enabled = false;
-		ending.renderer.enabled = false;
 	}
 	
 	void Update () 
@@ -36,15 +33,6 @@ public class GameState : MonoBehaviour
 
 		if (prevState != GameStates.GAMEOVER && currentState == GameStates.GAMEOVER)
 			GameOver();
-		if (currentState == GameStates.WIN)
-		{
-			map.SetActive(false);
-			timer = timer + Time.deltaTime;
-			if (timer >= endGameTime)
-			{
-				ending.renderer.enabled = true;
-			}
-		}
 
 		prevState = currentState;
 	}
@@ -52,6 +40,5 @@ public class GameState : MonoBehaviour
 	void GameOver()
 	{
 		gameOver.renderer.enabled = true;
-		map.SetActive(false);
 	}
 }

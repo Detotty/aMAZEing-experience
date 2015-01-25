@@ -3,12 +3,30 @@ using System.Collections;
 
 public class EndGame : MonoBehaviour 
 {
-	public GameObject gameState;
+	public float endGameTime = 6;
+	private float timer = 0;
 
-	void Update () {}
+	public GameObject endingObject;
+
+	void Start()
+	{
+		endingObject.renderer.enabled = false;
+	}
+
+	void Update () 
+	{
+		if (GameStateHelper.Instance.currentState == GameStates.WIN)
+		{
+			timer = timer + Time.deltaTime;
+			if (timer >= endGameTime)
+			{
+				endingObject.renderer.enabled = true;
+			}
+		}
+	}
 
 	void OnTriggerEnter2D(Collider2D other)
 	{
-		gameState.GetComponent<GameState>().currentState = GameStates.WIN;
+		GameStateHelper.Instance.currentState = GameStates.WIN;
 	}
 }

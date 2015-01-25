@@ -8,7 +8,6 @@ public class MovementScript : MonoBehaviour
 	public Vector2 direction = new Vector2(1, 0);
 	private Vector2 movement;
 
-	public GameObject gameState;
 	private Vector2 endPos;
 
 	// Get input from keyboard
@@ -39,7 +38,7 @@ public class MovementScript : MonoBehaviour
 	
 	void Update()
 	{
-		if (gameState.GetComponent<GameState>().currentState == GameStates.PLAYING)
+		if (GameStateHelper.Instance.currentState == GameStates.PLAYING)
 		{
 			CalculateMovement();
 			endPos = transform.position;

@@ -6,15 +6,12 @@ using System.Collections;
 /// </summary>
 public class SoundEffectHelperScript : MonoBehaviour
 {
-	void Start() {}
-	void Update() {}
-	
 	/// <summary>
 	/// Singleton
 	/// </summary>
 	public static SoundEffectHelperScript Instance = null;
 	
-	public AudioClip eletricSound;
+	public AudioClip lanternSound;
 	
 	void Awake()
 	{
@@ -26,16 +23,16 @@ public class SoundEffectHelperScript : MonoBehaviour
 		Instance = this;
 	}
 	
-	public void MakeEletricSound()
+	public void MakeLanternSound()
 	{
-		MakeSound(eletricSound, false);
+		MakeSound(lanternSound);
 	}
 	
 	/// <summary>
 	/// Play a given sound
 	/// </summary>
 	/// <param name="originalClip"></param>
-	private void MakeSound(AudioClip originalClip, bool loop)
+	private void MakeSound(AudioClip originalClip)
 	{
 		// As it is not 3D audio clip, position doesn't matter.
 		AudioSource.PlayClipAtPoint(originalClip, transform.position);
