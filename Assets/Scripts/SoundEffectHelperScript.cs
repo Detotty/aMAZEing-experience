@@ -12,6 +12,7 @@ public class SoundEffectHelperScript : MonoBehaviour
 	public static SoundEffectHelperScript Instance = null;
 	
 	public AudioClip lanternSound;
+	public AudioClip screamSound;
 	
 	void Awake()
 	{
@@ -27,6 +28,11 @@ public class SoundEffectHelperScript : MonoBehaviour
 	{
 		MakeSound(lanternSound);
 	}
+
+	public void MakeScreamSound()
+	{
+		MakeSound(screamSound);
+	}
 	
 	/// <summary>
 	/// Play a given sound
@@ -35,6 +41,6 @@ public class SoundEffectHelperScript : MonoBehaviour
 	private void MakeSound(AudioClip originalClip)
 	{
 		// As it is not 3D audio clip, position doesn't matter.
-		AudioSource.PlayClipAtPoint(originalClip, transform.position);
+		AudioSource.PlayClipAtPoint(originalClip, transform.position,1f);
 	}
 }

@@ -7,7 +7,8 @@ public class TrapScript : MonoBehaviour
 	{
 		SingleActivation,
 		ToggleActivation,
-		CageActivation
+		CageActivation,
+		ScreamActivation
 	};
 
 	public TrapType trapType = TrapType.SingleActivation;
@@ -36,6 +37,12 @@ public class TrapScript : MonoBehaviour
 			else
 				childTransform.gameObject.SetActive(true);
 		}
+	}
+
+	void ScreamActiveChildren()
+	{
+		SoundEffectHelperScript.Instance.MakeScreamSound();
+		CageActiveChildren();
 	}
 	
 	void CageActiveChildren()
@@ -88,6 +95,8 @@ public class TrapScript : MonoBehaviour
 				ToggleActiveChildren();
 			else if (trapType == TrapType.CageActivation)
 				CageActiveChildren();
+			else if (trapType == TrapType.ScreamActivation)
+				ScreamActiveChildren();
 		}
 	}
 
@@ -97,7 +106,7 @@ public class TrapScript : MonoBehaviour
 		{
 			elapsedTime += Time.deltaTime;
 
-			if (trapType == TrapType.CageActivation)
+			if (trapType == TrapType.CageActivation || trapType == TrapType.ScreamActivation)
 				CageTrapFinish();
 			else
 				Debug.LogError("Trap running but no finish method. Type: " + trapType);

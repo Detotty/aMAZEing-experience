@@ -22,16 +22,11 @@ public class LanternScript : MonoBehaviour
 		{
 			transform.eulerAngles = player.transform.eulerAngles;
 			transform.position = player.transform.position;
-			if (BatteriesHelper.Instance.Power == 1)
+			if (BatteriesHelper.Instance.Power == 1 || BatteriesHelper.Instance.Power == 2)
 				Blink();
 			else if (BatteriesHelper.Instance.Power == 0)
 				failure.renderer.enabled = true;
 		}
-	}
-	
-	void MakeSound()
-	{
-		AudioSource.PlayClipAtPoint(blinkSound, transform.position);
 	}
 	
 	void Blink()
@@ -46,7 +41,7 @@ public class LanternScript : MonoBehaviour
 				Debug.Log("[LanterScript] Blink: Blinking period " + blinkingPeriod);
 				failure.renderer.enabled = true;
 				timer = 0;
-				MakeSound();
+				SoundEffectHelperScript.Instance.MakeLanternSound();
 			}
 		}
 		else
@@ -61,11 +56,19 @@ public class LanternScript : MonoBehaviour
 
 		float CalculatePeriod()
 		{
-			if (BatteriesHelper.Instance.ElapsedTime < 2*BatteriesHelper.Instance.period/3)
-				return blinkingPeriodSlow;
-			else if (BatteriesHelper.Instance.ElapsedTime < 11*BatteriesHelper.Instance.period/12)
-				return blinkingPeriodFast;
+			if (BatteriesHelper.Instance.Power == 2)
+			{
+				if (BatteriesHelper.Instance.ElapsedTime < BatteriesHelper.Instance.period/2)
+					return 2*blinkingPeriodSlow;
+				else
+					return blinkingPeriodSlow;
+			}
 			else
-				return blinkingPeriodFast/2;
+			{
+				if (BatteriesHelper.Instance.ElapsedTime < BatteriesHelper.Instance.period/2)
+					return blinkingPeriodFast;
+				else
+					return blinkingPeriodFast/2;
+			}
 		}
 }
