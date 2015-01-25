@@ -7,7 +7,10 @@ public class MovementScript : MonoBehaviour
 	public Vector2 speed = new Vector2(10, 10);
 	public Vector2 direction = new Vector2(1, 0);
 	private Vector2 movement;
-	
+
+	public GameObject gameState;
+	private Vector2 endPos;
+
 	// Get input from keyboard
 	Vector2 GetInput()
 	{
@@ -36,7 +39,16 @@ public class MovementScript : MonoBehaviour
 	
 	void Update()
 	{
-		CalculateMovement();
+		if (gameState.GetComponent<GameState>().currentState == GameStates.PLAYING)
+		{
+			CalculateMovement();
+			endPos = transform.position;
+		}
+		else
+		{
+			transform.position = endPos;
+			transform.rigidbody2D.velocity = new Vector2(0f,0f);
+		}
 	}
 	
 	void FixedUpdate()

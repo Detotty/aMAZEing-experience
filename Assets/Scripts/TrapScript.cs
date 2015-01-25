@@ -12,8 +12,8 @@ public class TrapScript : MonoBehaviour
 
 	public TrapType trapType = TrapType.SingleActivation;
 
-	public int cageFirstDuration = 5;
-	public int cageDuration = 10;
+	public float cageFirstDuration = 5;
+	public float cageDuration = 10;
 
 	// Variables used for timed traps
 	private bool isTrapRunning = false;

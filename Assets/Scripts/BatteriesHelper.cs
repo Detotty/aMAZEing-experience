@@ -1,19 +1,24 @@
 ﻿using UnityEngine;
 using System.Collections;
 
-public class BatteriesHelper : MonoBehaviour {
+public class BatteriesHelper : MonoBehaviour 
+{
 	public static BatteriesHelper Instance;
 
-	public float period = 30f;
-	
+	public float period = 60f;
+	public int maximumPower = 5;
+	public int startPower = 3;
+
 	public Texture texture;
 	public float scale = 0.225f;
 	public float x = -5.9f;
 	public float y = -2.25f;
 
 	private float elapsedTime = 0f;
-
-	private int MAXIMUM_POWER = 3;
+	public float ElapsedTime
+	{
+		get {return elapsedTime;}
+	}
 
 	private int power;
 	public int Power
@@ -26,8 +31,8 @@ public class BatteriesHelper : MonoBehaviour {
 		{
 			if (value < 0)
 				power = 0;
-			else if (value >= MAXIMUM_POWER)
-				power = MAXIMUM_POWER;
+			else if (value >= maximumPower)
+				power = maximumPower;
 			else
 				power = value;
 		}
@@ -39,21 +44,14 @@ public class BatteriesHelper : MonoBehaviour {
 			Debug.LogError("More than one instance of BatteriesHelper!");
 
 		Instance = this;
-		Power = MAXIMUM_POWER;
+		Power = startPower;
 	}
 
 	public void DecreasePower()
 	{
-		--Power;
+		if (Power != 0)
+			--Power;
 		Debug.Log("Battery power: " + Power);
-		
-		if (Power == 0)
-		{
-			Debug.Log("Battery is dead");
-			GameObject playerObject = GameObject.FindWithTag("Player");
-			if (playerObject != null)
-				Destroy(playerObject);
-		}
 	}
 
 	public void IncreasePower()
