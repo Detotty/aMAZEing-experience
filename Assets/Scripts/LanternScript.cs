@@ -8,6 +8,7 @@ public class LanternScript : MonoBehaviour
 	private GameObject failure;
 	public GameObject scripts;
 	private float timer = 0;
+
 	void Start()
 	{
 		failure = transform.Find("Failure").gameObject;
@@ -21,7 +22,7 @@ public class LanternScript : MonoBehaviour
 			transform.position = player.transform.position;
 			if (BatteriesHelper.Instance.Power == 1)
 				Blink();
-			if (BatteriesHelper.Instance.Power == 0)
+			else if (BatteriesHelper.Instance.Power == 0)
 				failure.renderer.enabled = true;
 		}
 	}
