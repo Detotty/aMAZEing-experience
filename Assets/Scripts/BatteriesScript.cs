@@ -8,6 +8,7 @@ public class BatteriesScript : MonoBehaviour
 		if (collider.CompareTag("Player"))
 		{
 			BatteriesHelper.Instance.IncreasePower();
+			SoundEffectHelperScript.Instance.MakeCollectSound();
 			Destroy(gameObject);
 		}
 	}

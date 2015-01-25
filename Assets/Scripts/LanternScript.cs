@@ -18,7 +18,7 @@ public class LanternScript : MonoBehaviour
 	
 	void Update()
 	{
-		if (player != null)
+		if ((player != null) && (GameStateHelper.Instance.currentState == GameStates.PLAYING))
 		{
 			transform.eulerAngles = player.transform.eulerAngles;
 			transform.position = player.transform.position;

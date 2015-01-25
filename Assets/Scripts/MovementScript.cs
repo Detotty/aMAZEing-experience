@@ -24,10 +24,18 @@ public class MovementScript : MonoBehaviour
 	void CalculateMovement()
 	{
 		Vector2 input = GetInput();
+		Vector2 playerSpeed = speed;
+
+		if (BatteriesHelper.Instance.Power == 1)
+		{
+			playerSpeed.x *= 1.5f;
+			playerSpeed.y *= 1.5f;
+		}
+
 		if (input.x == 0 || input.y == 0)
-			movement = new Vector2(speed.x*input.x, speed.y*input.y);
+			movement = new Vector2(playerSpeed.x*input.x, playerSpeed.y*input.y);
 		else 
-			movement = new Vector2(speed.x*input.x/Mathf.Sqrt(2), speed.y*input.y/Mathf.Sqrt(2));
+			movement = new Vector2(playerSpeed.x*input.x/Mathf.Sqrt(2), playerSpeed.y*input.y/Mathf.Sqrt(2));
 	}
 	
 	// Move rigid body

@@ -40,5 +40,6 @@ public class GameStateHelper : MonoBehaviour
 	void GameOver()
 	{
 		gameOver.renderer.enabled = true;
+		SoundEffectHelperScript.Instance.PlayGameOverSoundtrack();
 	}
 }

@@ -41,6 +41,7 @@ public class TrapScript : MonoBehaviour
 
 	void ScreamActiveChildren()
 	{
+
 		SoundEffectHelperScript.Instance.MakeScreamSound();
 		CageActiveChildren();
 	}

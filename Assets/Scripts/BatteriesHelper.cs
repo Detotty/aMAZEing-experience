@@ -68,7 +68,8 @@ public class BatteriesHelper : MonoBehaviour
 	void OnGUI()
 	{
 		GameObject playerObject = GameObject.FindGameObjectWithTag("Player");
-		if (playerObject != null)
+
+		if ((playerObject != null) && (GameStateHelper.Instance.currentState == GameStates.PLAYING))
 		{
 			Vector3 playerPosition = playerObject.transform.position;
 			playerPosition.x += x;
