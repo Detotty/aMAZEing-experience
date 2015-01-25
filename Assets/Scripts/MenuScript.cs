@@ -7,6 +7,8 @@ public class MenuScript : MonoBehaviour
 	private bool pressed = false;
 	public GameObject beforeMenu,afterMenu;
 	public float delay = 1.5f;
+	public GameObject bus;
+	public float busSpeed;
 
 	private float timer = 0;
 
@@ -21,6 +23,7 @@ public class MenuScript : MonoBehaviour
 		{
 			beforeMenu.SetActive(false);
 			afterMenu.SetActive(true);
+			bus.rigidbody2D.velocity = new Vector2(busSpeed,0f);
 
 			timer = timer + Time.deltaTime;
 			// On Click, load the first level.
