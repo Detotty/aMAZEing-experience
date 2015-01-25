@@ -4,6 +4,7 @@ using System.Collections;
 public class EndGame : MonoBehaviour 
 {
 	public float endGameTime = 6;
+	public float creditsTime = 2;
 	private float timer = 0;
 
 	public GameObject endingObject;
@@ -22,6 +23,8 @@ public class EndGame : MonoBehaviour
 			{
 				endingObject.renderer.enabled = true;
 			}
+			if (timer >= endGameTime + creditsTime)
+				Application.LoadLevel("Credits");
 		}
 	}
 
