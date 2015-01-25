@@ -1,7 +1,15 @@
 fileFormatVersion: 2
-guid: fdbce954aebeef44488022ca3a1ffd90
+guid: cb04f908c2733774a87361c9ef630724
 TextureImporter:
-  fileIDToRecycleName: {}
+  fileIDToRecycleName:
+    21300000: spritemenu_0
+    21300002: spritemenu_1
+    21300004: spritemenu_2
+    21300006: spritemenu_3
+    21300008: spritemenu_4
+    21300010: spritemenu_5
+    21300012: spritemenu_6
+    21300014: spritemenu_7
   serializedVersion: 2
   mipmaps:
     mipMapMode: 0
@@ -27,7 +35,7 @@ TextureImporter:
     filterMode: -1
     aniso: 16
     mipBias: -1
-    wrapMode: -1
+    wrapMode: 1
   nPOTScale: 0
   lightmap: 0
   compressionQuality: 50
@@ -42,6 +50,86 @@ TextureImporter:
   textureType: 8
   buildTargetSettings: []
   spriteSheet:
-    sprites: []
+    sprites:
+    - name: spritemenu_0
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 3
+        width: 112
+        height: 60
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: spritemenu_1
+      rect:
+        serializedVersion: 2
+        x: 112
+        y: 3
+        width: 112
+        height: 60
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: spritemenu_2
+      rect:
+        serializedVersion: 2
+        x: 224
+        y: 3
+        width: 112
+        height: 60
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: spritemenu_3
+      rect:
+        serializedVersion: 2
+        x: 336
+        y: 3
+        width: 112
+        height: 60
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: spritemenu_4
+      rect:
+        serializedVersion: 2
+        x: 448
+        y: 3
+        width: 112
+        height: 60
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: spritemenu_5
+      rect:
+        serializedVersion: 2
+        x: 560
+        y: 3
+        width: 112
+        height: 60
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: spritemenu_6
+      rect:
+        serializedVersion: 2
+        x: 672
+        y: 3
+        width: 112
+        height: 60
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: spritemenu_7
+      rect:
+        serializedVersion: 2
+        x: 784
+        y: 3
+        width: 112
+        height: 60
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
   spritePackingTag: 
   userData: 
