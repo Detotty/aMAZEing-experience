@@ -1,5 +1,5 @@
 fileFormatVersion: 2
-guid: fc668e48220306d4581ba263e3a01121
+guid: 6358dc6dc8fd34f4fbdb8a26285fc42b
 TextureImporter:
   fileIDToRecycleName:
     21300000: minotauro_0
@@ -54,7 +54,7 @@ TextureImporter:
         serializedVersion: 2
         x: 0
         y: 0
-        width: 245
+        width: 283
         height: 288
       alignment: 0
       pivot: {x: 0, y: 0}
@@ -62,9 +62,9 @@ TextureImporter:
     - name: minotauro_1
       rect:
         serializedVersion: 2
-        x: 245
+        x: 283
         y: 0
-        width: 245
+        width: 283
         height: 288
       alignment: 0
       pivot: {x: 0, y: 0}
@@ -72,9 +72,9 @@ TextureImporter:
     - name: minotauro_2
       rect:
         serializedVersion: 2
-        x: 490
+        x: 566
         y: 0
-        width: 245
+        width: 283
         height: 288
       alignment: 0
       pivot: {x: 0, y: 0}
@@ -82,9 +82,9 @@ TextureImporter:
     - name: minotauro_3
       rect:
         serializedVersion: 2
-        x: 735
+        x: 849
         y: 0
-        width: 245
+        width: 283
         height: 288
       alignment: 0
       pivot: {x: 0, y: 0}
@@ -92,9 +92,9 @@ TextureImporter:
     - name: minotauro_4
       rect:
         serializedVersion: 2
-        x: 980
+        x: 1132
         y: 0
-        width: 245
+        width: 283
         height: 288
       alignment: 0
       pivot: {x: 0, y: 0}
@@ -102,9 +102,9 @@ TextureImporter:
     - name: minotauro_5
       rect:
         serializedVersion: 2
-        x: 1225
+        x: 1415
         y: 0
-        width: 245
+        width: 283
         height: 288
       alignment: 0
       pivot: {x: 0, y: 0}

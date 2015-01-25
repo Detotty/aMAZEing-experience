@@ -1,7 +1,17 @@
 fileFormatVersion: 2
-guid: 31b93a29227bc8448abd05a2cbdc5be4
+guid: fddd3376c0f93a846bef6776307edc6f
 TextureImporter:
-  fileIDToRecycleName: {}
+  fileIDToRecycleName:
+    21300000: arbustocomolhos_0
+    21300002: arbustocomolhos_1
+    21300004: arbustocomolhos_2
+    21300006: arbustocomolhos_3
+    21300008: arbustocomolhos_4
+    21300010: arbustocomolhos_5
+    21300012: arbustocomolhos_6
+    21300014: arbustocomolhos_7
+    21300016: arbustocomolhos_8
+    21300018: arbustocomolhos_9
   serializedVersion: 2
   mipmaps:
     mipMapMode: 0
@@ -27,7 +37,7 @@ TextureImporter:
     filterMode: -1
     aniso: 16
     mipBias: -1
-    wrapMode: -1
+    wrapMode: 1
   nPOTScale: 0
   lightmap: 0
   compressionQuality: 50
@@ -42,6 +52,106 @@ TextureImporter:
   textureType: 8
   buildTargetSettings: []
   spriteSheet:
-    sprites: []
+    sprites:
+    - name: arbustocomolhos_0
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 2
+        width: 227
+        height: 210
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: arbustocomolhos_1
+      rect:
+        serializedVersion: 2
+        x: 227
+        y: 2
+        width: 227
+        height: 210
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: arbustocomolhos_2
+      rect:
+        serializedVersion: 2
+        x: 454
+        y: 2
+        width: 227
+        height: 210
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: arbustocomolhos_3
+      rect:
+        serializedVersion: 2
+        x: 681
+        y: 2
+        width: 227
+        height: 210
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: arbustocomolhos_4
+      rect:
+        serializedVersion: 2
+        x: 908
+        y: 2
+        width: 227
+        height: 210
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: arbustocomolhos_5
+      rect:
+        serializedVersion: 2
+        x: 1135
+        y: 2
+        width: 227
+        height: 210
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: arbustocomolhos_6
+      rect:
+        serializedVersion: 2
+        x: 1362
+        y: 2
+        width: 227
+        height: 210
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: arbustocomolhos_7
+      rect:
+        serializedVersion: 2
+        x: 1589
+        y: 2
+        width: 227
+        height: 210
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: arbustocomolhos_8
+      rect:
+        serializedVersion: 2
+        x: 1816
+        y: 2
+        width: 227
+        height: 210
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: arbustocomolhos_9
+      rect:
+        serializedVersion: 2
+        x: 2043
+        y: 2
+        width: 227
+        height: 210
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
   spritePackingTag: 
   userData: 
