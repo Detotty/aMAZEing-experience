@@ -6,14 +6,15 @@ public class LanternScript : MonoBehaviour
 	public float blinkingPeriod = 1.5f;
 	public float blinkingDuration = 0.2f;
 	private GameObject failure;
-	public GameObject scripts;
 	private float timer = 0;
+	public AudioClip blinkSound;
 
 	void Start()
 	{
 		failure = transform.Find("Failure").gameObject;
 		failure.renderer.enabled = false;
 	}
+
 	void Update()
 	{
 		if (player != null)
@@ -26,6 +27,12 @@ public class LanternScript : MonoBehaviour
 				failure.renderer.enabled = true;
 		}
 	}
+
+	void MakeSound()
+	{
+		AudioSource.PlayClipAtPoint(blinkSound, transform.position);
+	}
+
 	void Blink()
 	{
 		timer = timer + Time.deltaTime;
@@ -35,6 +42,7 @@ public class LanternScript : MonoBehaviour
 			{
 				failure.renderer.enabled = true;
 				timer = 0;
+				MakeSound();
 			}
 		}
 		else

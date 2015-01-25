@@ -9,11 +9,12 @@ public class BatteriesHelper : MonoBehaviour {
 	public Texture texture;
 	public float scale = 0.225f;
 	public float x = -5.9f;
-	public float y = -2.25f;
+	public float y = -0.75f;
 
 	private float elapsedTime = 0f;
 
-	private int MAXIMUM_POWER = 3;
+	public int startingBatteries = 3;
+	public int maximumBatteries = 5;
 
 	private int power;
 	public int Power
@@ -26,8 +27,8 @@ public class BatteriesHelper : MonoBehaviour {
 		{
 			if (value < 0)
 				power = 0;
-			else if (value >= MAXIMUM_POWER)
-				power = MAXIMUM_POWER;
+			else if (value >= maximumBatteries)
+				power = maximumBatteries;
 			else
 				power = value;
 		}
@@ -39,7 +40,7 @@ public class BatteriesHelper : MonoBehaviour {
 			Debug.LogError("More than one instance of BatteriesHelper!");
 
 		Instance = this;
-		Power = MAXIMUM_POWER;
+		Power = startingBatteries;
 	}
 
 	public void DecreasePower()

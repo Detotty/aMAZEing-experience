@@ -5,11 +5,12 @@ public class AnimationScript : MonoBehaviour
 {
 	private GameObject walking;
 
-	void Start () 
+	void Start()
 	{
 		walking = transform.Find("Walking").gameObject;
 	}
-	void Update () 
+
+	void Update()
 	{
 		if (rigidbody2D.velocity != new Vector2(0f,0f))
 		{
