@@ -4,9 +4,21 @@ using System.Collections;
 
 public class MenuScript : MonoBehaviour
 {
+	bool pressed = false;
+
+	void Update()
+	{
+		if (pressed)
+		{
+			// On Click, load the first level.
+			// "Stage1" is the name of the first scene we created.
+			Application.LoadLevel("MazeTcholas");
+		}
+	}
+
 	void OnGUI()
 	{
-		Texture startButtonTexture = (Texture)Resources.Load("start_button");
+		Texture startButtonTexture = (Texture)Resources.Load("barra3");
 		Rect buttonRect = new Rect(Screen.width / 2 - (startButtonTexture.width / 2),
 		                           (2 * Screen.height / 3) - (startButtonTexture.height / 2),
 		                           startButtonTexture.width,
@@ -15,9 +27,7 @@ public class MenuScript : MonoBehaviour
 		// Draw a button to start the game
 		if(GUI.Button(buttonRect, startButtonTexture))
 		{
-			// On Click, load the first level.
-			// "Stage1" is the name of the first scene we created.
-			Application.LoadLevel("MazeTcholas");
+			pressed = true;
 		}
 	}
 }
