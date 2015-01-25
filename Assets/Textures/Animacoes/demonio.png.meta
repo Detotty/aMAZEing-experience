@@ -1,0 +1,135 @@
+fileFormatVersion: 2
+guid: ef7d4b1a1dbc63941a4a2e8c71b009a0
+TextureImporter:
+  fileIDToRecycleName:
+    21300000: demonio_0
+    21300002: demonio_1
+    21300004: demonio_2
+    21300006: demonio_3
+    21300008: demonio_4
+    21300010: demonio_5
+    21300012: demonio_6
+    21300014: demonio_7
+  serializedVersion: 2
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 1
+    linearTexture: 0
+    correctGamma: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: .25
+    normalMapFilter: 0
+  isReadable: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 0
+  seamlessCubemap: 0
+  textureFormat: -1
+  maxTextureSize: 1024
+  textureSettings:
+    filterMode: -1
+    aniso: 16
+    mipBias: -1
+    wrapMode: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: .5, y: .5}
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spritePixelsToUnits: 100
+  alphaIsTransparency: 1
+  textureType: 8
+  buildTargetSettings: []
+  spriteSheet:
+    sprites:
+    - name: demonio_0
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 38
+        width: 195
+        height: 300
+      alignment: 0
+      pivot: {x: .5, y: .5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: demonio_1
+      rect:
+        serializedVersion: 2
+        x: 195
+        y: 38
+        width: 195
+        height: 300
+      alignment: 0
+      pivot: {x: .5, y: .5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: demonio_2
+      rect:
+        serializedVersion: 2
+        x: 390
+        y: 38
+        width: 195
+        height: 300
+      alignment: 0
+      pivot: {x: .5, y: .5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: demonio_3
+      rect:
+        serializedVersion: 2
+        x: 585
+        y: 38
+        width: 195
+        height: 300
+      alignment: 0
+      pivot: {x: .5, y: .5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: demonio_4
+      rect:
+        serializedVersion: 2
+        x: 780
+        y: 38
+        width: 195
+        height: 300
+      alignment: 0
+      pivot: {x: .5, y: .5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: demonio_5
+      rect:
+        serializedVersion: 2
+        x: 975
+        y: 38
+        width: 195
+        height: 300
+      alignment: 0
+      pivot: {x: .5, y: .5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: demonio_6
+      rect:
+        serializedVersion: 2
+        x: 1170
+        y: 38
+        width: 195
+        height: 300
+      alignment: 0
+      pivot: {x: .5, y: .5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: demonio_7
+      rect:
+        serializedVersion: 2
+        x: 1365
+        y: 38
+        width: 195
+        height: 300
+      alignment: 0
+      pivot: {x: .5, y: .5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+  spritePackingTag: 
+  userData: 

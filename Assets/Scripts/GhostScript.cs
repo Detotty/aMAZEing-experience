@@ -14,6 +14,8 @@ public class GhostScript : MonoBehaviour
 			disappear = true;
 		
 		if (disappear)
+		{
 			Object.Destroy(gameObject,timer);
+		}
 	}
 }
